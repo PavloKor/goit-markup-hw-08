@@ -15,29 +15,59 @@
   margin-left: auto;
   padding: 0;
 }
+
 .menu-container {
   position: fixed;
   top: 0%;
   left: 0%;
   width: 100%;
   height: 100%;
+  padding: 48px 40px;
+
   background-color: white;
 
-  padding: 10px 15px;
+  display: flex;
+  flex-direction: column;
+
 
   transform: translatex(100%);
   transition: transform $perehid;
+
   &.is-open {
     transform: translatex(0);
   }
 }
 
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: transparent;
+  border: none;
+
+  cursor: pointer;
+
+  margin-right: 0%;
+  margin-left: auto;
+  padding: 0;
+  transition: fill $perehid;
+
+  &:hover,
+  &:focus {
+    fill: $btn-bcg-cl;
+  }
+}
 
 .mobile-menu {
   @extend %reset;
-  margin-left: 25px;
-  margin-top: 8px; 
+  margin-bottom: auto;
 }
+
+.mobile-menu__item {}
 
 .mobile-menu__item:not(:last-child) {
   margin-bottom: 32px;
@@ -46,13 +76,79 @@
 .mobile-menu__link {
   @extend %resetlink;
   font-weight: 500;
-    font-size: 40px;
-    line-height: calc(47 / 40);
-    letter-spacing: 0.02em;
-  
-    color: #212121;
+  font-size: 40px;
+  line-height: calc(47 / 40);
+  letter-spacing: 0.02em;
+  transition: color $perehid;
+
+  color: $main-txt-cl;
+
+  &:hover,
+  &:focus {
+    color: $accent-txt-cl;
+  }
 }
 
-.active {}
+.mobile-contact {
+  @extend %reset;
+}
 
-.current {}
+.mobile-contact__item {}
+
+.mobile-contact__item:not(:last-child) {
+  margin-bottom: 32px;
+}
+
+.mobile-contact__phone {
+  @extend %resetlink;
+  @extend %resetlink;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: calc(40 / 34);
+  letter-spacing: 0.02em;
+
+  color: $accent-txt-cl;
+}
+
+.mobile-contact__mail {
+  @extend %resetlink;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: calc(28 / 24);
+  letter-spacing: 0.02em;
+
+  color: $text-cl;
+}
+
+.mobile-socials {
+  @extend %reset;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-top: 64px;
+  margin-bottom: 48px;
+}
+
+.mobile-socials__item {
+  position: relative;
+}
+
+.mobile-socials__link-last,
+.mobile-socials__link {
+  @extend %resetlink;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: calc(22 / 18);
+  letter-spacing: 0.02em;
+  color: $accent-txt-cl;
+}
+
+.mobile-socials__link::after {
+  content: '';
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  display: block;
+  height: 100%;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+}
