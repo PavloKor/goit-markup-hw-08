@@ -138,6 +138,11 @@
 .nav {
   margin-left: 93px;
 }
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+}
 
 .nav-list {
   display: flex;
@@ -182,6 +187,11 @@
   gap: 30px;
   margin-left: auto;
 }
+@media screen and (max-width: 767px) {
+  .list-contact {
+    display: none;
+  }
+}
 
 .link-contact {
   color: #757575;
@@ -210,6 +220,11 @@
   margin-right: 0%;
   margin-left: auto;
   padding: 0;
+}
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
 }
 
 .menu-container {

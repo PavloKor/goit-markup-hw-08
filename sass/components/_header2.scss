@@ -34,6 +34,10 @@
   color: $accent-txt-cl;
 }
 .nav {
+  @media screen and (max-width: 767px) {
+    display: none;
+    
+  }
   margin-left: 93px;
 }
 .nav-list {
@@ -74,8 +78,14 @@
   border-radius: 2px;
 }
 .list-contact {
+  @media screen and (max-width: 767px) {
+      display: none;
+    }
+    
   @extend %reset;
   display: flex;
+  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 30px;
   margin-left: auto;
 }
@@ -85,13 +95,14 @@
   &:hover,
   &:focus {
     color: $accent-txt-cl;
+  &__icon {
+    padding: 0%;
   }
 }
-.link-contact__icon {
+/* .link-contact__icon {
   .link-contact:hover &,
   .link-contact:focus & {
     fill: $accent-txt-cl;
   }
   fill: $text-cl;
-  margin-right: 10px; 
-}
+  margin-right: 10px;} */
