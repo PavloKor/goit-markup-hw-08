@@ -17,11 +17,25 @@
 .client-list {
   @extend %reset;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    gap: 30px;
+  }
+  
   &__item {
-    width: 170px;
+    /* width: 170px; */
+    width: calc((100% - 30px) / 2);
     height: 92px;
     color: $icon-txt-cl;
+    @media screen and (min-width: 768px) {
+      width: calc((100% - 60px) / 3);
+    }
+        @media screen and (min-width: 1200px) {
+          
+        }
   }
   &__link {
     @extend %resetlink;
