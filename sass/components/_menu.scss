@@ -17,6 +17,7 @@
 }
 
 .menu-container {
+
   position: fixed;
   top: 0%;
   left: 0%;
@@ -32,6 +33,7 @@
 
   transform: translatex(100%);
   transition: transform $perehid;
+  
 
   &.is-open {
     transform: translatex(0);

@@ -588,12 +588,30 @@
   background-color: #2f303a;
 }
 .footer__conteiner {
-  display: flex;
-  align-items: baseline;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer__conteiner {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
 
 .footer-address {
-  margin-right: 70px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer-address {
+    margin-left: 76px;
+    margin-right: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-address {
+    margin-right: 70px;
+  }
 }
 .footer-address__logo {
   display: block;
@@ -625,6 +643,11 @@
 .footer-icons {
   margin-right: auto;
 }
+@media screen and (max-width: 1199px) {
+  .footer-icons {
+    margin-bottom: 60px;
+  }
+}
 .footer-icons__title {
   font-weight: 700;
   font-size: 14px;
@@ -638,6 +661,11 @@
 .footer-socials {
   display: flex;
   gap: 10px;
+}
+@media screen and (max-width: 1199px) {
+  .footer-socials {
+    justify-content: center;
+  }
 }
 .footer-socials__link {
   display: flex;
@@ -658,7 +686,12 @@
 }
 
 .footer-form {
-  width: 570px;
+  width: auto;
+}
+@media screen and (max-width: 1200) {
+  .footer-form {
+    width: 570px;
+  }
 }
 .footer-form__title {
   margin-bottom: 20px;
@@ -674,8 +707,14 @@
 .form-group {
   display: flex;
 }
+@media screen and (max-width: 1199px) {
+  .form-group {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 .form-group__mail {
-  width: 358px;
+  width: 100%;
   margin-right: 12px;
   padding: 13px 16px;
   font-weight: 400;
@@ -684,6 +723,16 @@
   border: 1px solid rgba(255, 255, 255, 0.3);
   background-color: transparent;
   border-radius: 4px;
+}
+@media screen and (max-width: 1199px) {
+  .form-group__mail {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .form-group__mail {
+    width: 358px;
+  }
 }
 .form-group__btn {
   width: 200px;
@@ -989,4 +1038,10 @@ body {
   color: var(--main-txt-cl);
   background-color: var(--main-bcg-cl);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }/*# sourceMappingURL=main.css.map */
