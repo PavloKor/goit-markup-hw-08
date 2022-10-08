@@ -1,28 +1,32 @@
 .page {
   @extend %page;
 }
+
 .header {
   background-color: $main-bcg-cl;
   padding: 24px 0;
   border-bottom: 1px solid #ececec;
+
   @media screen and (min-width: 480px) {
-      padding: 16px 0;
-    }
-  
-    @media screen and (min-width: 768px) {
-      padding: 26px 0;
-    }
-  
-    @media screen and (min-width: 1200px) {
-      padding: 24px 0;
-  
-    }
+    padding: 16px 0;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 26px 0;
+  }
+
+  @media screen and (min-width: 1200px) {
+    padding: 24px 0;
+
+  }
 }
+
 .header-conteiner {
   @extend %conteiner;
   display: flex;
   align-items: center;
 }
+
 .header-logo {
   @extend %resetlink;
   font-family: $logo-font;
@@ -30,32 +34,39 @@
   font-size: 26px;
   line-height: calc(31 / 26);
 }
+
 .accent {
   color: $accent-txt-cl;
 }
 .nav {
   @media screen and (max-width: 767px) {
     display: none;
-    
+
   }
+
   margin-left: 93px;
 }
+
 .nav-list {
   @extend %reset;
   display: flex;
   gap: 50px;
 }
+
 .link-nav {
   @extend %resetlink;
   position: relative;
+
   &:hover,
   &:focus {
     color: $accent-txt-cl;
   }
 }
+
 .active {
   color: $btn-bcg-cl;
 }
+
 .link-nav,
 .link-contact {
   font-weight: 500;
@@ -65,6 +76,7 @@
 
   transition: color $perehid;
 }
+
 .active::after {
   position: absolute;
   top: 44px;
@@ -79,33 +91,33 @@
 }
 .list-contact {
   @media screen and (max-width: 767px) {
-      display: none;
-    }
-    
+    display: none;
+  }
+
   @extend %reset;
-  display: flex;
-  flex-wrap: wrap;
-  /* flex-wrap: wrap; */
-  gap: 30px;
-  margin-left: auto;
+    margin-left: auto;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+    @media screen and (min-width: 1200px) {
+      gap: 30px;
+    }
+  
+  
 }
+
 .link-contact {
   @extend %resetlink;
   color: $text-cl;
+
   &:hover,
   &:focus {
     color: $accent-txt-cl;
-  &__icon {
-    padding: 0%;
   }
-} 
-leknv
-
-
-/* .link-contact__icon {
-  .link-contact:hover &,
-  .link-contact:focus & {
-    fill: $accent-txt-cl;
+    &__icon {
+      padding: 0%;
+    }
   }
-  fill: $text-cl;
-  margin-right: 10px;} */

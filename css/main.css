@@ -183,13 +183,24 @@
 }
 
 .list-contact {
-  display: flex;
-  gap: 30px;
   margin-left: auto;
 }
 @media screen and (max-width: 767px) {
   .list-contact {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .list-contact {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: flex-end;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .list-contact {
+    gap: 30px;
   }
 }
 
@@ -199,13 +210,8 @@
 .link-contact:hover, .link-contact:focus {
   color: #2196f3;
 }
-
 .link-contact__icon {
-  fill: #757575;
-  margin-right: 10px;
-}
-.link-contact:hover .link-contact__icon, .link-contact:focus .link-contact__icon {
-  fill: #2196f3;
+  padding: 0%;
 }
 
 .menu-btn {
