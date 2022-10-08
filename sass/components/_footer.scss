@@ -3,12 +3,16 @@
   background-color: $accent-bcg-cl;
   &__conteiner {
     @extend %conteiner;
-    text-align: center;
+    
+    
     @media screen and (min-width: 768px) {
       display: flex;
       align-items: baseline;
       justify-content: center;
       flex-wrap: wrap;
+    }
+    @media screen and (max-width: 1199px) {
+      text-align: center;
     }
     
   }
@@ -18,9 +22,9 @@
   @media screen and (min-width: 768px) {
     margin-left: 76px;
     margin-right: 165px;
-    
   }
   @media screen and (min-width: 1200px) {
+    margin-left: 0;
     margin-right: 70px;
   }
   
