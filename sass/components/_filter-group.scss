@@ -1,9 +1,14 @@
 .filter-group {
   @extend %reset;
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
   margin-bottom: 50px;
   gap: 8px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    flex-wrap: nowrap;
+    
+  }
 
   &__btn {
     @extend %filter-btn;

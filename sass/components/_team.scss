@@ -1,13 +1,20 @@
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
   background-color: #f5f4fa;
 }
 .team-conteiner {
   @extend %conteiner;
   &__title {
     @extend %reset;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
     font-weight: 700;
     font-size: 36px;
     line-height: 42px;
@@ -18,18 +25,38 @@
 .team-list {
   @extend %reset;
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    /* justify-content: center; */
+    
+  }
+  
   &__item {
-    width: 270px;
+    /* width: 270px; */
+    width: 100%;
     background-color: $main-bcg-cl;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      width: calc((100% - 30px) / 2);
+    } 
+    
   }
   &__desc {
     text-align: center;
     padding-top: 30px;
-    padding-bottom: 30px;
+    padding-bottom: 24px;
+    @media screen and (min-width: 1200px) {
+      padding-top: 30px;
+      padding-bottom: 30px;
+    }
+  }
+  &__img {
+    width: 100%;
   }
 }
 .team-desc__name {
