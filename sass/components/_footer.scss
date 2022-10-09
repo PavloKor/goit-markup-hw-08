@@ -8,7 +8,7 @@
     @media screen and (min-width: 768px) {
       display: flex;
       align-items: baseline;
-      justify-content: center;
+      justify-content: space-around;
       flex-wrap: wrap;
     }
     @media screen and (max-width: 1199px) {
@@ -19,13 +19,14 @@
 }
 .footer-address {
   margin-bottom: 60px;
-  @media screen and (min-width: 768px) {
+  /* @media screen and (min-width: 768px) {
     margin-left: 76px;
     margin-right: 165px;
-  }
+  } */
   @media screen and (min-width: 1200px) {
     margin-left: 0;
     margin-right: 70px;
+    margin-bottom: 0%;
   }
   
   &__logo {
@@ -61,7 +62,7 @@
   }
 }
 .footer-icons {
-  margin-right: auto;
+  /* margin-right: auto; */
   @media screen and (max-width: 1199px) {
     margin-bottom: 60px;
     

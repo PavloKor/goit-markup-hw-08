@@ -90,23 +90,26 @@
   border-radius: 2px;
 }
 .list-contact {
+  @extend %reset;
+  margin-left: auto;
   @media screen and (max-width: 767px) {
     display: none;
   }
-
-  @extend %reset;
-    margin-left: auto;
-  @media screen and (min-width: 768px) {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: flex-end;
-  }
+  
     @media screen and (min-width: 1200px) {
+      display: flex;
+      flex-wrap: wrap;
       gap: 30px;
     }
   
   
+}
+.contact-item {
+  @media screen and (min-width: 768px) {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
 }
 
 .link-contact {
