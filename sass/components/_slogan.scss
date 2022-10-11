@@ -32,12 +32,12 @@
       max-width: 1600px;
       padding: 200px 0;
       background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-          url(../images/slogan/Img_lg-@1x.jpeg);
+          url(../images/slogan/img_lg-@1x.jpeg);
     @media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
         background: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-            url(../images/slogan/Img_lg-@2x.jpeg);
+            url(../images/slogan/img_lg-@2x.jpeg);
       }
     }
 }
